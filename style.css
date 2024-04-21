@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --primary-color: #818498;
+  --green: #25564b;
+  --white:#ffffff;
+}
+
+
+body{
+    font-size: 18px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+img {
+  width: 100%;
+}
+
+p {
+  color: var(--primary-color);
+}
+
+
+a {
+    text-decoration: none;
+  }
+
+  li a{
+    color: var(--primary-color);
+    text-decoration: none;
+
+  }
+
+  ul {
+    list-style-type: none;
+  }
+ 
+
+  .desktop-menu{
+    display: none;
+  }
+
+  /* mobile menu */
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    color: #fff;
+    top: 20px; 
+    z-index: 1000;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 90%;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  
+  #mobile-menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+
+#mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin-bottom: 5px;
+  }
+
+  /* display it wiht js */
+  .mobile-menu-items {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-left: 0;
+    position: absolute;
+    z-index: 1000;
+    top: 33%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-color: var(--white);
+    width: 80%;
+    height: 33%;
+    text-align: center;  
+    
+    
+    
+  }
+
+  .mobile-menu-items.active{
+    display: flex;
+
+  }
+
+  .mobile-menu-items::after {
+   
+    content: "";
+    content: "";
+    position: absolute;
+    margin-bottom: 100%;
+    right: 0;
+    width: 0;
+    height: 0;
+    transform: translate(0, 50%);
+    background-color: transparent;
+    border-left: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-top: 40px solid transparent;
+    border-right: 40px solid var(--white);
+
+}
+
+
+
+  .mobile-menu-items ul{
+    padding-top: 60px;
+  }
+ 
+  
+  .contact{
+    background-color: hsl(51, 100%, 49%);
+    border-radius: 30px;
+    padding: 1em 2em;
+    width: 25%;
+    margin: 0 auto;
+  
+
+    
+  }
+
+  .contact:hover{
+  background-color: hsla(51, 100%, 49%, 0.671);;
+  }
+  .contact a {
+    color:#000;
+  }
+
+ 
+
+
+  /* Showcase  */
+
+  .showcase{
+
+    background-image: url('images/mobile/image-header.jpg');
+    background-size: cover; 
+    background-position: center; 
+    height: 70vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; 
+    text-align: center;
+    position: relative;
+
+  }
+
+  
+
+  .showcase h1{
+    color: var(--white);
+    font-size: 2.3rem;
+     font-family: "Fraunces", serif;
+    font-weight: 600;
+    letter-spacing: 9px;
+    margin-bottom: 100px;
+  }
+
+  .arrow{
+    
+    position: absolute;
+    top:55%;
+  }
+.brand {
+  margin: 0 auto;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.text p,
+h2 {
+  margin-bottom: 1rem;
+}
+
+
+
+
+.anchor {
+  font-weight: 900;
+  font-size: 0.9rem;
+  margin: 0 auto;
+  font-family: 'Fraunces', sans-serif;
+  color:hsl(212, 27%, 19%);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+
+.anchor:hover{
+  color:hsla(211, 28%, 19%, 0.705);
+
+}
+.anchor::after{
+  content: "";
+  position: absolute;
+  bottom:0;
+  top:15px;
+  left: 0;
+  right: 100px;
+  width: 100%;
+  border-radius: 10px;
+  border-bottom: 7px solid hsla(51, 100%, 49%, 0.61);
+  
+}
+.anchor-rose {
+  font-weight: 900;
+  font-size: 0.9rem;
+  margin: 0 auto;
+  font-family: 'Fraunces', sans-serif;
+  color:hsl(212, 27%, 19%);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+
+.anchor-rose::after{
+  content: "";
+  position: absolute;
+  bottom:0;
+  top:15px;
+  left: 0;
+  right: 100px;
+  border-radius: 10px;
+  width: 100%;
+  border-bottom: 7px solid hsla(7, 99%, 70%, 0.582);
+  
+}
+.graphic-design {
+  position: relative;
+}
+
+.image-text {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  line-height: 25px;
+  padding: 0 2rem;
+  font-family: Barlow, sans-serif;
+  
+}
+
+.image-text,
+h2 {
+  margin-bottom: 25px;
+}
+
+.image-text h2,
+p {
+  color: var(--green);
+}
+
+.text p{
+  color:var(--primary-color);
+  font-family: "Barlow", sans-serif;
+  padding:1rem;
+  text-align: center;
+  line-height: 29px;
+}
+
+.headline{
+  text-align: center;
+  font-family: 'Fraunces', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #23303e;
+}
+
+.photography {
+  position: relative;
+}
+
+.photography-text{
+  padding: 0rem 2rem;
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  line-height: 25px;
+  color: #19536b;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+
+.image-container-g{
+
+  background-image: url('images/mobile/image-graphic-design.jpg');
+  background-size: cover;
+  position: relative;
+
+}
+
+.image-container-p{
+  background-image: url('images/mobile/image-photography.jpg');
+  background-size: cover;
+  position: relative;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-gap: 0px;
+  height: 1200px;}
+
+
+.design-header{
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.images img{
+  display: block;
+}
+.position{
+  color: #a7abae;
+  margin-top: 15px;
+}
+
+/* Clint */
+
+.circle {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  margin: 0 auto;
+}
+
+/* Clint section */
+
+.client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+}
+
+.client div {
+  margin-bottom: 80px;
+}
+.clint-text{
+    max-width: 300px;
+}
+.name {
+  margin-top: 50px;
+}
+
+.testimonial {
+  color: var(--primary-color);
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+  font-size: 17px;
+}
+
+
+.gallery{
+
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 0;
+
+}
+.img-gllery{
+        flex: 1 0 50%; 
+        box-sizing: border-box;
+
+      
+}
+
+.img-gllery img {
+    display: block; 
+    width: 100%;
+    height: auto;
+    padding: 0; 
+    margin: 0; 
+    border: 0; 
+  }
+
+
+  footer{
+    background-color: #8ed0c4;
+    padding: 4rem 1.2rem;
+  }
+
+  .logo-container{
+    width: 300px; 
+    margin: 0 auto; 
+    text-align: center; /
+  }
+  .logo {
+    width:200px;
+    max-width: 100%;
+    text-align: center;
+}
+  footer .logo {
+    filter: invert(45%) sepia(22%) saturate(790%) hue-rotate(118deg) brightness(95%) contrast(92%);
+}
+
+.services{
+    /* margin: 0 auto; */
+    text-align: center;
+    padding: 30px 0 100px 0;
+}
+.services span{
+
+    margin:25px;
+    padding-bottom: 90px;
+    color: #458c7e;
+
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+   
+}
+ .icons img{
+    width: 35px;
+ }
+@media (min-width: 600px) {
+
+.headline{
+    font-size: "Fraunces", serif;
+    color:hsl(212, 27%, 19%);
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: left;
+
+}
+
+.brand .text{
+        padding: 8.7rem 9rem;
+    }
+    .text p {
+        text-align: left; 
+    }
+    .text{
+        align-items: start;
+    }
+    .audience .text{
+        padding: 8.7rem 9rem;
+
+
+    }
+.showcase{
+
+    background-image: url('images/desktop/image-header.jpg');
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; 
+    text-align: center;
+    position: relative;
+
+  }
+  .showcase h1{
+    font-size: 3rem;
+    font-weight: 900;
+  }
+.arrow{
+    top:45%;
+    width:25px ;
+
+}
+.mobile-menu-items{
+    display: none;
+}
+
+.triangle{
+    display: none;
+}
+.showcase h1{
+    margin-bottom: 230px;
+}
+  .brand {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .brand img {
+    width: 50%;
+  }
+
+  .audience {
+    display: flex;
+  }
+  
+
+  .audience img {
+    width: 50%;
+  }
+
+  /* .images {
+    display: flex;
+  } */
+  .photography-text {
+    padding: 0rem 8rem;
+  }
+
+  /* Clintes */
+
+
+.clients{
+
+  background-color: #fffbf8;
+
+  }
+  .client {
+    flex-direction: row;
+    column-gap: 4%;
+  }
+  .gallery{
+    flex-wrap: initial; 
+
+  }
+  .img-gllery{
+    flex: initial; 
+  
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.desktop-menu{
+    position: absolute;
+    top:40px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    text-align: center;
+    color:var(--white);
+    padding-left: 2rem;
+
+}
+.menu-item{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+.menu-item li a{
+    color:var(--white);
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+}
+.menu-item li a:hover{
+  color: #ffffffde;
+}
+
+.contact-white{
+    background-color: var(--white);
+    border-radius: 30px;
+    padding: 0.5em 2em;
+    width: 20%;
+    margin: 0 auto;
+    color: #000 !important;  
+  }
+  .contact-white:hover{
+  background-color: #ffffff9d;
+    
+    }
+
+  .image-container {
+    height: 500px; 
+    background-size: cover;
+  }
+  .image-container-g{
+
+    background-image: url('images/desktop/image-graphic-design.jpg');
+    background-position: center 20%; 
+
+
+  }
+
+  .image-container-p{
+    background-image: url('images/desktop/image-photography.jpg');
+    background-position: center 20%; 
+
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+    height: 600px;
+  }
+  .image-text{
+    padding: 0 6rem;
+    font-weight: 600;
+
+  }
+  .client{
+    align-items: initial;
+  }
+}
+
+
